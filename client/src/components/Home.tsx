@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Code, Layout, User } from 'lucide-react';
+import { ArrowRight, Code, Layout } from 'lucide-react';
 import { Link } from 'wouter';
 
 const Home = () => {
@@ -53,9 +53,11 @@ const Home = () => {
             transition={{ delay: 0.4 }}
             className="md:w-1/2 flex justify-center items-center"
           >
-            <div className="w-64 h-64 bg-blue-600 dark:bg-blue-500 rounded-full flex items-center justify-center">
-              <User size={120} className="text-white" />
-            </div>
+            <img
+              src="/ishaq.png"
+              alt="Muhammad Ishaq"
+              className="w-64 h-64 rounded-full object-cover shadow-xl dark:shadow-blue-500/10"
+            />
           </motion.div>
         </div>
       </motion.section>
