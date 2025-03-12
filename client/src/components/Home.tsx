@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, Code, Layout } from 'lucide-react';
-import { Link } from 'wouter';
+import React from "react";
+import { motion } from "framer-motion";
+import { ArrowRight, Code, Layout } from "lucide-react";
+import { Link } from "wouter";
 
 const Home = () => {
   return (
@@ -29,7 +29,8 @@ const Home = () => {
               transition={{ delay: 0.4 }}
               className="text-xl text-gray-600 dark:text-gray-300 mb-8"
             >
-              A Web Developer passionate about creating beautiful and functional web experiences.
+              A Web Developer passionate about creating beautiful and functional
+              web experiences.
             </motion.p>
             <motion.div
               initial={{ y: 20, opacity: 0 }}
@@ -54,7 +55,7 @@ const Home = () => {
             className="md:w-1/2 flex justify-center items-center"
           >
             <img
-              src="/ishaq.png"
+              src="/images/ishaq.png"
               alt="Muhammad Ishaq"
               className="w-64 h-64 rounded-full object-cover shadow-xl dark:shadow-blue-500/10"
             />
@@ -72,23 +73,32 @@ const Home = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">What I Do</h2>
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+              What I Do
+            </h2>
             <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              I offer a wide range of services to help businesses and individuals establish their online presence.
+              I offer a wide range of services to help businesses and
+              individuals establish their online presence.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
-                icon: <Layout className="w-12 h-12 text-blue-600 dark:text-blue-400" />,
-                title: 'Web Development',
-                description: 'Developing modern websites using the latest technologies.',
+                icon: (
+                  <Layout className="w-12 h-12 text-blue-600 dark:text-blue-400" />
+                ),
+                title: "Web Development",
+                description:
+                  "Developing modern websites using the latest technologies.",
               },
               {
-                icon: <Code className="w-12 h-12 text-blue-600 dark:text-blue-400" />,
-                title: 'Custom Solutions',
-                description: 'Developing tailored solutions to meet your specific needs.',
+                icon: (
+                  <Code className="w-12 h-12 text-blue-600 dark:text-blue-400" />
+                ),
+                title: "Custom Solutions",
+                description:
+                  "Developing tailored solutions to meet your specific needs.",
               },
             ].map((service, index) => (
               <motion.div
@@ -103,7 +113,9 @@ const Home = () => {
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300">{service.description}</p>
+                <p className="text-gray-600 dark:text-gray-300">
+                  {service.description}
+                </p>
               </motion.div>
             ))}
           </div>
