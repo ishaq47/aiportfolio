@@ -39,7 +39,7 @@ const Portfolio = () => {
       liveUrl: "https://linkfluencer.io/",
       githubUrl: "#",
       category: "Web App",
-      image: '/images/linkfluencer.png' // Added image path
+      image: '/images/If.png' // Added image path
     },
     {
       title: "Tech Creator",
