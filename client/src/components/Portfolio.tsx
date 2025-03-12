@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, Globe, Code, Layout, Server, Database, Cloud } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link } from 'wouter';
 
 const Portfolio = () => {
   const projects = [
@@ -180,7 +180,7 @@ const Portfolio = () => {
               Let's discuss your project and create something amazing
             </motion.p>
             <Link
-              to="/contact"
+              href="/contact"
               className="inline-block bg-white text-blue-600 dark:bg-gray-900 dark:text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
             >
               Get in Touch
