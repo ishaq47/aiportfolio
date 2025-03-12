@@ -8,7 +8,6 @@ const Portfolio = () => {
     {
       title: 'Move Muse (Events Management platform)',
       description: `A full-featured event management platform built with React, Node.js, and MongoDB. Users can create and manage events, leave reviews, and securely purchase tickets.`,
-      icon: <Layout className="w-16 h-16 text-blue-600 dark:text-blue-400" />,
       technologies: ['React', 'Node.js', 'MongoDB', 'Tailwind CSS', 'Redux'],
       liveUrl: 'https://move-muse12.netlify.app',
       githubUrl: '#',
@@ -104,8 +103,18 @@ const Portfolio = () => {
                 transition={{ delay: index * 0.1 }}
                 className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl dark:shadow-blue-500/10 transition-all duration-300"
               >
-                <div className="relative h-48 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-700 dark:to-gray-800 flex items-center justify-center">
-                  {project.icon}
+                <div className="relative h-48 overflow-hidden">
+                  {index === 0 ? (
+                    <img
+                      src="/images/move.png"
+                      alt="Move Muse Platform"
+                      className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
+                    />
+                  ) : (
+                    <div className="h-full bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-700 dark:to-gray-800 flex items-center justify-center">
+                      {project.icon}
+                    </div>
+                  )}
                   <div className="absolute top-4 right-4 bg-blue-600 dark:bg-blue-500 text-white px-3 py-1 rounded-full text-sm">
                     {project.category}
                   </div>
