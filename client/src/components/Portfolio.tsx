@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, Globe, Code, Layout, Server, Database, Cloud } from 'lucide-react';
+import { Github, Globe } from 'lucide-react';
 import { Link } from 'wouter';
 
 const Portfolio = () => {
@@ -11,52 +11,53 @@ const Portfolio = () => {
       technologies: ['React', 'Node.js', 'MongoDB', 'Tailwind CSS', 'Redux'],
       liveUrl: 'https://move-muse12.netlify.app',
       githubUrl: '#',
-      category: 'Web App'
+      category: 'Web App',
+      image: '/images/move.png'
     },
     {
       title: "Global Bids",
       description: "A collaborative task management application with real-time updates, team workspaces, and progress tracking. I worked on the frontend side using React and Tailwind CSS.",
-      icon: <Globe className="w-16 h-16 text-blue-600 dark:text-blue-400" />,
       technologies: ["React", "Tailwind CSS"],
       liveUrl: "#",
       githubUrl: "#",
-      category: "Web App"
+      category: "Web App",
+      image: '/images/global.jpg'
     },
     {
       title: "KKRA Travel Tours",
       description: "A travel and tourism website designed to help tourists explore destinations, book tours, and plan their trips. Built with React Native, it includes features like destination guides, booking options, and user reviews.",
-      icon: <Server className="w-16 h-16 text-blue-600 dark:text-blue-400" />,
       technologies: ["React", "Redux", "Node.js", "MongoDB"],
       liveUrl: "https://www.kkratraveltours.com/",
       githubUrl: "#",
-      category: "Web App"
+      category: "Web App",
+      image: '/images/kkra.jpg'
     },
     {
       title: "Link Fluencer",
       description: "A modern link shortening platform that allows users to create and manage shortened URLs. Built with Next.js and Tailwind CSS, I worked on the frontend side to ensure a seamless user experience.",
-      icon: <Code className="w-16 h-16 text-blue-600 dark:text-blue-400" />,
       technologies: ["Next.js", "Tailwind CSS"],
       liveUrl: "https://linkfluencer.io/",
       githubUrl: "#",
-      category: "Web App"
+      category: "Web App",
+      image: '/images/linkfluencer.png' // Added image path
     },
     {
       title: "Tech Creator",
-      description: "A software solution website offering SEO optimization, AI-powered content generation, and more. It helps create blog posts, social media content, and marketing copy.",
-      icon: <Database className="w-16 h-16 text-blue-600 dark:text-blue-400" />,
+      description: "A modern software solution website offering SEO optimization, AI-powered content generation, and more. It helps create blog posts, social media content, and marketing copy.",
       technologies: ["Tailwind CSS", "Context API"],
       liveUrl: "https://www.techcreator.co/",
       githubUrl: "#",
-      category: "Web App"
+      category: "Web App",
+      image: '/images/techcreator.png'
     },
     {
       title: "My Reel Dream",
       description: "A platform designed for filmmakers to manage their projects and collaborate with others. I worked on the frontend side to create an intuitive and interactive user interface.",
-      icon: <Cloud className="w-16 h-16 text-blue-600 dark:text-blue-400" />,
       technologies: ["React", "Material UI"],
       liveUrl: "https://www.myreeldream.ai/",
       githubUrl: "#",
-      category: "Web App"
+      category: "Web App",
+      image: '/images/dream.png'
     }
   ];
 
@@ -104,17 +105,11 @@ const Portfolio = () => {
                 className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl dark:shadow-blue-500/10 transition-all duration-300"
               >
                 <div className="relative h-48 overflow-hidden">
-                  {index === 0 ? (
-                    <img
-                      src="/images/move.png"
-                      alt="Move Muse Platform"
-                      className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
-                    />
-                  ) : (
-                    <div className="h-full bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-700 dark:to-gray-800 flex items-center justify-center">
-                      {project.icon}
-                    </div>
-                  )}
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
+                  />
                   <div className="absolute top-4 right-4 bg-blue-600 dark:bg-blue-500 text-white px-3 py-1 rounded-full text-sm">
                     {project.category}
                   </div>
